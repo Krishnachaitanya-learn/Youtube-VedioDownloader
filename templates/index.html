@@ -1,36 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form action="/download" method="post">
-      <div class="container cont">
-        <h3>Youtube Downloader</h3>
-        <div class="logo"><h4>YD</h4></div>
-        <div class="text">
-          <input
-            name="download_link"
-            type="text"
-            id="inputurl"
-            placeholder="Enter URL"
-          />
-        </div>
-        <input type="submit" id="btn" value="Download" />
-        <!--<button id="btn" class="cont">Download</button>-->
-      </div>
-    </form>
+{% extends "layout.html" %} 
 
-    <script type="text/javascript" src="../static/vanilla-tilt.js"></script>
-    <script src="../static/index.js"></script>
-    <script>
-      VanillaTilt.init(document.querySelector(".cont"), {
-        max: 25,
-        speed: 400,
-      });
-    </script>
-  </body>
-</html>
+<!--Form division-->
+{% block body %}
+<form action="/download" method="post">
+  <div class="container cont">
+    <h3>Youtube Downloader</h3>
+    <div class="logo"><h4>YD</h4></div>
+    <div class="text">
+      <input
+        name="download_link"
+        type="text"
+        id="inputurl"
+        placeholder="Enter URL"
+      />
+    </div>
+    <input type="submit" id="btn" value="Download" />
+    <!--<button id="btn" class="cont">Download</button>-->
+  </div>
+</form>
+{% endblock %}

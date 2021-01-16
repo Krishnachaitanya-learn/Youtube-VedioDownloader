@@ -12,7 +12,7 @@ def index():
 def download():
     url = request.form.get('download_link')
     if not url:
-        return "Failure"
+        return render_template('failure.html')
     else:
         return f'Requested URL {url}'
 
