@@ -1,4 +1,4 @@
-# Youtube-VedioDownloader
+# Youtube-VideoDownloader
 download a youtube vedio by pasting the link #a basic idea on flask package.
 
 #PURPOSE
